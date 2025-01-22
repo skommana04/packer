@@ -34,13 +34,13 @@
     "sudo apt update -y",
     "sudo apt install -y software-properties-common ansible nginx python3-apt git stress", 
     "sudo add-apt-repository --yes --update ppa:ansible/ansible || exit 1",
-    "sudo apt install -y ansible || exit 1", 
+    "sudo apt install -y ansible || exit 1",
+    "sudo apt install -y unzip",
     "sudo git clone https://github.com/skommana04/autoscaling_testing.git /myrepo || exit 1",
     "sudo ansible-playbook /myrepo/playbook.yaml || exit 1",
-    "sudo apt install -y curl",
-    "curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg",
-    "sudo apt update -y",
-    "sudo apt install -y terraform"
+    "sudo wget https://releases.hashicorp.com/terraform/1.10.4/terraform_1.10.4_linux_amd64.zip",
+    "sudo unzip terraform_1.10.4_linux_amd64.zip",
+    "sudo mv terraform /usr/local/bin"
   ]
 }
 ]

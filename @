@@ -1,0 +1,4 @@
+# packer
+packer
+packer validate -var-file=packer-vars.json packer.json
+packer build -var-file=packer-vars.json packer.json
